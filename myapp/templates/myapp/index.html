@@ -1,0 +1,27 @@
+{%extends 'myapp/base.html'%}
+{% load static %}
+{% block body %}
+  <div class="container">
+    <div class="title">EVENT HORIZON</div>
+    <div class="subtitle">Welcome User</div>
+
+    <button class="btn" onclick="window.location.href='{% url 'customer' %}'">CUSTOMER</button>
+    <button class="btn" onclick="window.location.href='{% url 'employee' %}'">EMPLOYEE</button>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <a href="{% url 'about_us' %}" id="aboutLink">About Us</a> |
+    <a href="#" id="privacyLink">Privacy Policy</a>
+  </footer>
+
+  <!-- Modal -->
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <span class="close" id="closeModal">&times;</span>
+      <div id="modalText"></div>
+    </div>
+  </div>
+
+  <script src="{% static 'myapp/script.js' %}"></script>
+{% endblock %}

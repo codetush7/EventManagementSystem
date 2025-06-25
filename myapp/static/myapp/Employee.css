@@ -1,0 +1,83 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  background: url('https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1400&q=80') no-repeat center center fixed;
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-container {
+  width: 100%;
+  max-width: 400px;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 40px;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+}
+
+.login-title {
+  font-family: 'Orbitron', sans-serif;
+  color: #fff;
+  margin-bottom: 25px;
+  font-size: 1.8em;
+}
+
+form input {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 8px;
+  font-size: 1em;
+}
+
+.login-btn {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+  background-color: #e94e77;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.login-btn:hover {
+  background-color: #c83a60;
+}
+
+.links {
+  text-align: right;
+  margin-top: 5px;
+}
+
+.links a {
+  color: #f799ac;
+  font-size: 0.9em;
+  text-decoration: none;
+}
+
+.links a:hover {
+  text-decoration: underline;
+}
+
+.footer {
+  position: fixed;
+  bottom: 15px;
+  width: 100%;
+  text-align: center;
+  color: #ffffffcc;
+  font-size: 0.85em;
+}

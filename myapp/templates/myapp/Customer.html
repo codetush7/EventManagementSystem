@@ -1,0 +1,22 @@
+{% load static  %}
+{% block body %}
+<link rel="stylesheet" href="{% static 'myapp/customer.css' %}">
+  <div class="login-container">
+    <div class="login-box">
+      <h2 class="login-title">Customer Sign In</h2>
+      <form method="post">
+        {% csrf_token %}
+        <input type="text" name="email_or_id" placeholder="Customer ID / E-mail" required>
+        <input type="password" name="password" placeholder="Password" required>
+        
+        <button type="submit" class="login-btn">Sign In</button>
+        <a href="#" class="register-btn" onclick="window.location.href='{% url 'register' %}'">Click for Register</a>
+      </form>
+    </div>
+  </div>
+
+  <footer class="footer">
+    © 2025 All rights Reserved
+  </footer>
+
+{% endblock %}

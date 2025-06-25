@@ -1,0 +1,49 @@
+/* Background settings */
+body {
+    
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Center the card */
+.card-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Transparent card */
+.about-card {
+    background: rgba(255, 255, 255, 0.1);  /* Translucent white */
+    backdrop-filter: blur(10px);          /* Frosted glass effect */
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);  /* Soft shadow */
+    max-width: 600px;
+    color: #fff;
+    text-align: center;
+}
+
+.about-card h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #ffea00;
+}
+
+.about-card p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+.footer {
+  position: fixed;
+  bottom: 15px;
+  width: 100%;
+  text-align: center;
+  color: #ffffffcc;
+  font-size: 0.85em;
+}
