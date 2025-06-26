@@ -103,11 +103,3 @@ body {
   font-weight: bold;
   cursor: pointer;
 }
-.footer {
-  position: fixed;
-  bottom: 15px;
-  width: 100%;
-  text-align: center;
-  color: #ffffffcc;
-  font-size: 0.85em;
-}

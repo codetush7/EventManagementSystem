@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Final Bill</title>
+  <link rel="stylesheet" href="final-bill.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Great+Vibes&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="bill-box">
+    <h1>Final Bill</h1>
+
+    <div class="bill-line" id="food-info"></div>
+    <div class="bill-line" id="venue-info"></div>
+    <div class="bill-line" id="guest-info"></div>
+
+    <div class="highlight" id="grand-total"></div>
+  </div>
+
+  <script>
+    const foodData = JSON.parse(localStorage.getItem('selectedFood')) || [];
+    const venuePrice = parseInt(localStorage.getItem('venuePrice') || "0");
+    const guestCount = parseInt(localStorage.getItem('guestCount') || "0");
+
+    let totalFoodPerPerson = 0;
+    foodData.forEach(item => {
+      const [, price] = item.split("|");
+      totalFoodPerPerson += parseInt(price);
+    });
+
+    const totalFoodCost = totalFoodPerPerson * guestCount;
+    const grandTotal = totalFoodCost + venuePrice;
+
+    document.getElementById("food-info").innerText = `Food Price (₹${totalFoodPerPerson} × ${guestCount} guests): ₹${totalFoodCost}`;
+    document.getElementById("venue-info").innerText = `Venue Price: ₹${venuePrice}`;
+    document.getElementById("guest-info").innerText = `Total Guests: ${guestCount}`;
+    document.getElementById("grand-total").innerText = `Total Bill: ₹${grandTotal}`;
+  </script>
+</body>
+</html>

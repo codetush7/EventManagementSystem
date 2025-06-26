@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Food Summary</title>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Roboto&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="food-summary.css" />
+</head>
+<body>
+
+  <div class="summary-box">
+    <h1>Your Selected Food</h1>
+    <ul id="food-list"></ul>
+    <div class="total" id="total-price"></div>
+    <h2>*This price is for one guest.</h2>
+    <a href="venue.html" class="next-btn">Proceed to Venue ➜</a>
+  </div>
+
+  <script>
+    const list = document.getElementById("food-list");
+    const totalBox = document.getElementById("total-price");
+    const data = JSON.parse(localStorage.getItem("selectedFood")) || [];
+
+    let total = 0;
+
+    if (data.length === 0) {
+      list.innerHTML = "<li>No items selected.</li>";
+    } else {
+      data.forEach(item => {
+        const [name, price] = item.split("|");
+        const li = document.createElement("li");
+        li.textContent = `${name} – ₹${price}`;
+        list.appendChild(li);
+        total += parseInt(price);
+      });
+
+      totalBox.innerText = `Total Price: ₹${total}`;
+    }
+  </script>
+</body>
+</html>

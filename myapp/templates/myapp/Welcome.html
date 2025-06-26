@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Welcome</title>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Roboto&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="welcome.css" />
+</head>
+<body>
+
+  <div class="welcome-text" id="welcomeMessage">Welcome</div>
+
+
+  <div class="content-box">
+    <a href="book.html"><button class="action-btn">Book event</button></a>
+
+    <button class="action-btn">View current event</button>
+    <button class="action-btn light">Edit information</button>
+    <button class="action-btn">Sign out</button>
+  </div>
+
+  <footer class="footer">
+    <a href="#">About Us</a>
+    <a href="#">Privacy Policy</a>
+    <a href="#">Terms of Use</a>
+    <span>© 2025 All Rights Reserved</span>
+  </footer>
+  <script>
+  const params = new URLSearchParams(window.location.search);
+  const name = params.get("name") || "Guest";
+  document.getElementById("welcomeMessage").textContent = `Welcome, ${name}`;
+</script>
+
+
+</body>
+</html>

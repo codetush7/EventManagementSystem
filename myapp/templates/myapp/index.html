@@ -1,17 +1,25 @@
-{%extends 'myapp/base.html'%}
-{% load static %}
-{% block body %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Event Management System</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&family=Pacifico&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
   <div class="container">
     <div class="title">EVENT HORIZON</div>
     <div class="subtitle">Welcome User</div>
 
-    <button class="btn" onclick="window.location.href='{% url 'customer' %}'">CUSTOMER</button>
-    <button class="btn" onclick="window.location.href='{% url 'employee' %}'">EMPLOYEE</button>
+    <button class="btn" onclick="window.location.href='customer.html'">CUSTOMER</button>
+    <button class="btn" onclick="window.location.href='Employee.html'">EMPLOYEE</button>
   </div>
 
   <!-- Footer -->
   <footer class="footer">
-    <a href="{% url 'about_us' %}" id="aboutLink">About Us</a> |
+    <a href="#" id="aboutLink">About Us</a> |
     <a href="#" id="privacyLink">Privacy Policy</a>
   </footer>
 
@@ -23,5 +31,6 @@
     </div>
   </div>
 
-  <script src="{% static 'myapp/script.js' %}"></script>
-{% endblock %}
+  <script src="script.js"></script>
+</body>
+</html>

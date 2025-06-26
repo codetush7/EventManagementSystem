@@ -1,0 +1,94 @@
+/* Base styling */
+body {
+  margin: 0;
+  padding: 30px;
+  font-family: 'Roboto', sans-serif;
+  background: url("https://images.pexels.com/photos/3101522/pexels-photo-3101522.jpeg") no-repeat center center fixed;
+  background-size: cover;
+  color: white;
+  text-align: center;
+}
+
+/* Page title styling */
+.title {
+  font-family: 'Great Vibes', cursive;
+  font-size: 3em;
+  margin-bottom: 30px;
+  color: white;
+  text-shadow: 1px 1px 5px black;
+}
+
+/* Layout for all venue cards */
+.venue-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+}
+
+/* Card styling */
+.venue-card {
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 12px;
+  padding: 20px;
+  width: 300px;
+  text-align: left;
+  position: relative;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease;
+}
+
+.venue-card:hover {
+  transform: scale(1.03);
+}
+
+/* Information rows */
+.info {
+  margin: 10px 0;
+  font-size: 1em;
+  color: #fff;
+}
+
+.info span {
+  font-weight: bold;
+  color: #d4a55c;
+  font-size: 0.95em;
+}
+
+/* Checkbox styling */
+.checkbox-container {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+}
+
+.checkbox-container input[type="checkbox"] {
+  width: 22px;
+  height: 22px;
+  accent-color: #d4a55c;
+  cursor: pointer;
+}
+
+/* Button */
+.next-btn {
+  display: inline-block;
+  margin-top: 30px;
+  padding: 12px 30px;
+  font-size: 1.1em;
+  background-color: #d4a55c;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  transition: background-color 0.3s ease;
+}
+
+.next-btn:hover {
+  background-color: #b48639;
+}
+.venue-card.selected {
+  border: 2px solid #3498db;
+  background-color: #1b6eae;
+  transition: 0.3s;
+}
+

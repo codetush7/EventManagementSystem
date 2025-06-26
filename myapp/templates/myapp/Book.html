@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Book an Event</title>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Roboto&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="Book.css" />
+</head>
+<body>
+
+  <div class="page-title">Book Your Event</div>
+
+  <div class="form-container">
+    <form onsubmit="handleBooking(event)">
+      <label for="event-type">Event Type</label>
+      <select id="event-type" required>
+        <option value="">--Select--</option>
+        <option value="wedding">Wedding</option>
+        <option value="birthday">Birthday</option>
+        <option value="corporate">Corporate Event</option>
+        <option value="anniversary">Anniversary</option>
+      </select>
+
+      <label for="event-date">Event Date</label>
+      <input type="date" id="event-date" required />
+
+      <label for="venue">Venue</label>
+      <input type="text" id="venue" placeholder="Enter venue location" required />
+
+      <label for="guests">Number of Guests</label>
+      <input type="number" id="guests" min="1" required />
+
+      <label for="instructions">Special Instructions</label>
+      <textarea id="instructions" placeholder="Any preferences or requirements..."></textarea>
+
+      <button type="submit" class="next-btn">Next ➜</button>
+    </form>
+  </div>
+
+  <footer class="footer">
+    © 2025 All Rights Reserved
+  </footer>
+
+  <script>
+    function handleBooking(event) {
+      event.preventDefault(); // prevent form from reloading the page
+
+      const guestCount = document.getElementById("guests").value;
+      if (!guestCount || guestCount < 1) {
+        alert("Please enter a valid number of guests.");
+        return;
+      }
+
+      // Store guest count (you can also store event type, date, etc. if needed)
+      localStorage.setItem("guestCount", guestCount);
+
+      // Redirect to food page
+      window.location.href = "Food.html";
+    }
+  </script>
+
+</body>
+</html>

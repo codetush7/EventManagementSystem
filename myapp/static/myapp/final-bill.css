@@ -1,0 +1,37 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 40px;
+  background: url('https://images.pexels.com/photos/2072169/pexels-photo-2072169.jpeg') no-repeat center center fixed;
+  background-size: cover;
+  color: white;
+  text-align: center;
+}
+
+.bill-box {
+  background: rgba(0, 0, 0, 0.8);
+  max-width: 600px;
+  margin: auto;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.6);
+}
+
+h1 {
+  font-family: 'Great Vibes', cursive;
+  font-size: 3em;
+  margin-bottom: 20px;
+  color: #ffd88c;
+}
+
+.bill-line {
+  font-size: 1.2em;
+  margin: 12px 0;
+}
+
+.highlight {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #ffbe55;
+  margin-top: 30px;
+}

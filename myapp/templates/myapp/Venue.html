@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Select a Venue</title>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Roboto&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="venue.css" />
+</head>
+<body>
+  <h1 class="title">Select a Venue</h1>
+
+  <div class="venue-container">
+
+    <!-- Venue 1 -->
+    <div class="venue-card" onclick="selectVenue(45000, this)">
+      <label class="checkbox-container">
+        <input type="radio" name="venue" />
+      </label>
+      <div class="info"><span>Name</span><br>The Crown</div>
+      <div class="info"><span>Location</span><br>Delhi</div>
+      <div class="info"><span>Address</span><br>Sarojini Nagar, Delhi</div>
+      <div class="info"><span>Capacity</span><br>1500</div>
+      <div class="info"><span>Price</span><br>₹45,000</div>
+    </div>
+
+    <!-- Venue 2 -->
+    <div class="venue-card" onclick="selectVenue(85000, this)">
+      <label class="checkbox-container">
+        <input type="radio" name="venue" />
+      </label>
+      <div class="info"><span>Name</span><br>F9 Resort</div>
+      <div class="info"><span>Location</span><br>Chennai</div>
+      <div class="info"><span>Address</span><br>Q238/Kamala Nagar, Chennai</div>
+      <div class="info"><span>Capacity</span><br>2000</div>
+      <div class="info"><span>Price</span><br>₹85,000</div>
+    </div>
+
+    <!-- Venue 3 -->
+    <div class="venue-card" onclick="selectVenue(60000, this)">
+      <label class="checkbox-container">
+        <input type="radio" name="venue" />
+      </label>
+      <div class="info"><span>Name</span><br>Grand Wedders</div>
+      <div class="info"><span>Location</span><br>Kolkata</div>
+      <div class="info"><span>Address</span><br>City Square, Meera Road</div>
+      <div class="info"><span>Capacity</span><br>2000</div>
+      <div class="info"><span>Price</span><br>₹60,000</div>
+    </div>
+
+    <!-- Venue 4 -->
+    <div class="venue-card" onclick="selectVenue(150000, this)">
+      <label class="checkbox-container">
+        <input type="radio" name="venue" />
+      </label>
+      <div class="info"><span>Name</span><br>L7 Destination</div>
+      <div class="info"><span>Location</span><br>Mumbai</div>
+      <div class="info"><span>Address</span><br>Near Bandra Kurla Complex, Mumbai</div>
+      <div class="info"><span>Capacity</span><br>2000</div>
+      <div class="info"><span>Price</span><br>₹1,50,000</div>
+    </div>
+
+    <!-- Venue 5 -->
+    <div class="venue-card" onclick="selectVenue(250000, this)">
+      <label class="checkbox-container">
+        <input type="radio" name="venue" />
+      </label>
+      <div class="info"><span>Name</span><br>D.M Hall</div>
+      <div class="info"><span>Location</span><br>Bengaluru</div>
+      <div class="info"><span>Address</span><br>22 Residency Road, Ashok Nagar, Bengaluru</div>
+      <div class="info"><span>Capacity</span><br>2500</div>
+      <div class="info"><span>Price</span><br>₹2,50,000</div>
+    </div>
+
+    <!-- Venue 6 -->
+    <div class="venue-card" onclick="selectVenue(300000, this)">
+      <label class="checkbox-container">
+        <input type="radio" name="venue" />
+      </label>
+      <div class="info"><span>Name</span><br>Crystal Palace</div>
+      <div class="info"><span>Location</span><br>Hyderabad</div>
+      <div class="info"><span>Address</span><br>Plot No. 301, Banjara Hills, Hyderabad</div>
+      <div class="info"><span>Capacity</span><br>3000</div>
+      <div class="info"><span>Price</span><br>₹3,00,000</div>
+    </div>
+
+  </div>
+
+  <div style="text-align: center; margin-top: 30px;">
+    <button class="next-btn" onclick="goToFinalBill()">Next ➜</button>
+  </div>
+
+  <script>
+    let selectedPrice = null;
+
+    function selectVenue(price, element) {
+      selectedPrice = price;
+
+      // Clear selection from others
+      const cards = document.querySelectorAll('.venue-card');
+      cards.forEach(card => card.classList.remove('selected'));
+
+      // Add highlight to current
+      element.classList.add('selected');
+
+      // Also check the radio button
+      element.querySelector('input[type=radio]').checked = true;
+    }
+
+    function goToFinalBill() {
+      if (!selectedPrice) {
+        alert("Please select a venue before continuing.");
+        return;
+      }
+
+      localStorage.setItem("venuePrice", selectedPrice);
+      window.location.href = "final-bill.html";
+    }
+  </script>
+
+</body>
+</html>

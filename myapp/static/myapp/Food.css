@@ -1,0 +1,81 @@
+/* Background and base styles */
+body {
+  margin: 0;
+  padding: 40px;
+  font-family: 'Roboto', sans-serif;
+  background: url("https://images.pexels.com/photos/16935961/pexels-photo-16935961.jpeg") no-repeat center center fixed;
+  background-size: cover;
+  color: white;
+}
+
+/* Title styling */
+.title {
+  text-align: center;
+  font-family: 'Great Vibes', cursive;
+  font-size: 3em;
+  color: #fff3e6;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  margin-bottom: 30px;
+}
+
+/* Menu box styling */
+.menu-box {
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 15px;
+  padding: 30px 40px;
+  max-width: 700px;
+  margin: 0 auto;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.4);
+}
+
+/* Menu section heading */
+.menu-box h2 {
+  font-size: 2em;
+  color: #f7c873;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Section labels like Indian/Chinese etc. */
+.section {
+  font-size: 1.3em;
+  margin-top: 20px;
+  color: #ffe299;
+  font-weight: bold;
+}
+
+/* Checkbox labels */
+label {
+  display: block;
+  margin: 10px 0;
+  font-size: 1.1em;
+  cursor: pointer;
+  color: #fff;
+}
+
+/* Small note */
+.menu-box h3 {
+  font-size: 1em;
+  color: #f4d49b;
+  margin-top: 20px;
+  text-align: right;
+}
+
+/* Next Button */
+.next-btn {
+  display: block;
+  width: fit-content;
+  margin: 30px auto 0;
+  padding: 12px 30px;
+  font-size: 1.1em;
+  background-color: #d4a55c;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+  transition: background-color 0.3s ease;
+}
+
+.next-btn:hover {
+  background-color: #b48639;
+}
