@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Food Menu</title>
   <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Roboto&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="Food.css" />
+  <link rel="stylesheet" href="{% static 'myapp/food.css' %}" />
 </head>
 <body>
   <div class="title">Select a Menu</div>
@@ -43,9 +44,10 @@
   </div>
 
   <!-- Next button triggers JS and moves to summary -->
-  <a href="food-summary.html" class="next-btn" onclick="saveFoodSelection()">Next ➜</a>
+  <a href="{% url 'food_summary' %}" class="next-btn" onclick="saveFoodSelection()">Next ➜</a>
 
   <script>
+    localStorage.setItem("guestCount", "{{ request.session.guestCount|default:'0' }}");
     function saveFoodSelection() {
       const selected = [];
       const checkboxes = document.querySelectorAll('input[type="checkbox"]');

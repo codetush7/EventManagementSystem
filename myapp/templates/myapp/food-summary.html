@@ -1,10 +1,12 @@
+{% load static%}
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Food Summary</title>
   <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Roboto&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="food-summary.css" />
+  <link rel="stylesheet" href="{% static 'myapp/food-summary.css' %}" />
 </head>
 <body>
 
@@ -13,7 +15,7 @@
     <ul id="food-list"></ul>
     <div class="total" id="total-price"></div>
     <h2>*This price is for one guest.</h2>
-    <a href="venue.html" class="next-btn">Proceed to Venue ➜</a>
+    <a href="{% url 'venue' %}" class="next-btn">Proceed to Venue ➜</a>
   </div>
 
   <script>

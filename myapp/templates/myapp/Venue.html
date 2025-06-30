@@ -1,10 +1,11 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <title>Select a Venue</title>
   <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Roboto&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="venue.css" />
+  <link rel="stylesheet" href="{% static 'myapp/venue.css' %}" />
 </head>
 <body>
   <h1 class="title">Select a Venue</h1>
@@ -113,7 +114,7 @@
       }
 
       localStorage.setItem("venuePrice", selectedPrice);
-      window.location.href = "final-bill.html";
+      window.location.href = "{% url 'final_bill' %}";
     }
   </script>
 
